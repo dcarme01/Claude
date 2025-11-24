@@ -2,7 +2,22 @@
 
 An app that analyzes Kalshi prediction markets and identifies potentially profitable bets.
 
-## Setup
+## 📱 iPhone-Only Deployment (No Computer Needed!)
+
+**Want to use this entirely from your iPhone?** Check out the full guide:
+
+👉 **[iPhone Deployment Guide (DEPLOY.md)](DEPLOY.md)**
+
+Deploy to the cloud in 5 minutes using:
+- **Render.com** (Recommended - 100% free)
+- **Railway.app** (Free tier)
+- **Replit** (Easy but may require payment)
+
+Access your analyzer from anywhere, 24/7, with no computer required!
+
+---
+
+## 💻 Local Setup (If You Have a Computer)
 
 1. Install dependencies:
 ```bash

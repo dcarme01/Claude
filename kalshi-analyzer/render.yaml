@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: kalshi-analyzer
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: KALSHI_EMAIL
+        sync: false
+      - key: KALSHI_PASSWORD
+        sync: false
+      - key: KALSHI_DEMO_MODE
+        value: true
