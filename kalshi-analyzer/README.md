@@ -27,6 +27,66 @@ python app.py
 
 Then visit http://localhost:5000
 
+## 📱 Access from iPhone
+
+The web interface is fully mobile-optimized! To access from your iPhone:
+
+### Quick Start (Recommended)
+
+```bash
+./start-mobile.sh
+```
+
+This script will automatically:
+- Detect your computer's IP address
+- Show you the URL to visit on your iPhone
+- Start the web server
+
+### Manual Setup
+
+1. **Make sure your iPhone and computer are on the same WiFi network**
+
+2. **Find your computer's local IP address:**
+   - **Mac**:
+     ```bash
+     ipconfig getifaddr en0
+     ```
+   - **Linux**:
+     ```bash
+     hostname -I | awk '{print $1}'
+     ```
+   - **Windows**:
+     ```bash
+     ipconfig
+     ```
+     (Look for IPv4 Address)
+
+3. **Start the server:**
+   ```bash
+   python app.py
+   ```
+
+4. **On your iPhone, open Safari and visit:**
+   ```
+   http://YOUR-IP-ADDRESS:5000
+   ```
+
+   For example, if your IP is 192.168.1.100:
+   ```
+   http://192.168.1.100:5000
+   ```
+
+5. **Add to Home Screen** (optional):
+   - Tap the Share button in Safari
+   - Select "Add to Home Screen"
+   - Now you have a quick-access app icon!
+
+The interface automatically adapts to your iPhone screen size with:
+- Touch-friendly buttons
+- Optimized layout for mobile
+- Easy scrolling through markets
+- Full functionality on the go
+
 ## How It Works
 
 The analyzer evaluates markets based on:
