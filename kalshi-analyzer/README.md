@@ -1,6 +1,30 @@
 # Kalshi Bet Analyzer
 
-An app that analyzes Kalshi prediction markets and identifies potentially profitable bets.
+A powerful platform that analyzes Kalshi prediction markets with **live, real-time data** and identifies potentially profitable bets.
+
+## 🚀 Choose Your Platform
+
+### 🍎 macOS Desktop App (New! - Recommended for Mac Users)
+
+**Native Mac application with live market analysis and auto-refresh!**
+
+Features:
+- 🔴 **Live market data** with configurable auto-refresh (30s-5min intervals)
+- 🎨 **Beautiful native Mac interface** using SF Pro fonts
+- 📊 **Real-time updates** - never miss an opportunity
+- 🔍 **Detailed market analysis** with double-click details
+- 📱 **Menu bar app** for quick access
+- ⚡ **Fast & responsive** - multi-threaded design
+
+**Quick Start:**
+```bash
+cd kalshi-analyzer
+./run-mac-app.sh
+```
+
+👉 **[Full macOS Setup Guide (MAC_SETUP.md)](MAC_SETUP.md)**
+
+---
 
 ## 📱 iPhone-Only Deployment (No Computer Needed!)
 
@@ -14,6 +38,32 @@ Deploy to the cloud in 5 minutes using:
 - **Replit** (Easy but may require payment)
 
 Access your analyzer from anywhere, 24/7, with no computer required!
+
+---
+
+## 🌐 Web Interface (Cross-Platform)
+
+Run the web interface on any device with a browser.
+
+**Quick Start:**
+```bash
+cd kalshi-analyzer
+./start-mobile.sh
+```
+
+Then visit `http://localhost:5000` or access from your phone on the same WiFi network.
+
+---
+
+## 📊 Platform Comparison
+
+| Feature | macOS App | Web Interface | iPhone Cloud |
+|---------|-----------|---------------|--------------|
+| **Live Auto-Refresh** | ✅ Built-in | ❌ Manual | ❌ Manual |
+| **Native Experience** | ✅ Native Mac | 🌐 Browser | 📱 Mobile Web |
+| **Setup Time** | 2 minutes | 2 minutes | 5 minutes |
+| **Access Anywhere** | ❌ Mac only | ✅ Local network | ✅ Anywhere |
+| **Best For** | Mac power users | Multi-device | Mobile-only |
 
 ---
 
@@ -118,6 +168,40 @@ The analyzer evaluates markets based on:
 - Scores opportunities from 1-10
 - Provides reasoning for each recommendation
 - Web interface for easy viewing
+
+## 🎯 Quick Launch Reference
+
+### macOS Users
+```bash
+# Full desktop app with live updates
+./run-mac-app.sh
+
+# Menu bar app for quick access
+./run-menubar.sh
+
+# Web interface
+./start-mobile.sh
+```
+
+### Command Line
+```bash
+# One-time analysis
+python analyzer.py
+
+# Web server
+python app.py
+```
+
+## 🔧 Advanced: Creating a Standalone Mac App
+
+Want a double-clickable Mac application?
+
+```bash
+pip install py2app
+python setup.py py2app
+```
+
+Your app will be in `dist/KalshiBetAnalyzer.app` - move it to Applications!
 
 ## Disclaimer
 
