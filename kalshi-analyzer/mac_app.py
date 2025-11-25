@@ -72,14 +72,24 @@ class KalshiMacApp:
         toolbar.pack(fill=tk.X, padx=10)
 
         # Title
+        try:
+            title_font = ("SF Pro Display", 20, "bold")
+        except:
+            title_font = ("Helvetica", 20, "bold")
+
         title = tk.Label(toolbar, text="🎰 Kalshi Bet Analyzer",
-                        font=("SF Pro Display", 20, "bold"),
+                        font=title_font,
                         bg=self.bg_color, fg=self.text_color)
         title.pack(side=tk.LEFT, padx=10)
 
         # Status indicator
+        try:
+            status_font = ("SF Pro Text", 12)
+        except:
+            status_font = ("Helvetica", 12)
+
         self.status_label = tk.Label(toolbar, text="● Ready",
-                                     font=("SF Pro Text", 12),
+                                     font=status_font,
                                      bg=self.bg_color, fg="#34C759")
         self.status_label.pack(side=tk.LEFT, padx=20)
 
@@ -88,17 +98,27 @@ class KalshiMacApp:
 
         # Auto-refresh toggle
         self.auto_refresh_var = tk.BooleanVar()
+        try:
+            check_font = ("SF Pro Text", 11)
+        except:
+            check_font = ("Helvetica", 11)
+
         auto_refresh_check = tk.Checkbutton(
             toolbar, text="Auto-refresh", variable=self.auto_refresh_var,
             command=self.toggle_auto_refresh,
-            bg=self.bg_color, font=("SF Pro Text", 11),
+            bg=self.bg_color, font=check_font,
             activebackground=self.bg_color
         )
         auto_refresh_check.pack(side=tk.RIGHT, padx=5)
 
         # Refresh interval
+        try:
+            label_font = ("SF Pro Text", 11)
+        except:
+            label_font = ("Helvetica", 11)
+
         tk.Label(toolbar, text="Interval:", bg=self.bg_color,
-                font=("SF Pro Text", 11)).pack(side=tk.RIGHT, padx=5)
+                font=label_font).pack(side=tk.RIGHT, padx=5)
 
         self.interval_var = tk.StringVar(value="60")
         interval_options = ["30", "60", "120", "300"]
